@@ -21,13 +21,7 @@ const Computers = () => {
         castShadow
         shadow-mapSize={1024}
       />
-      <pointLight
-        position={[10, 30, 10]}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
-      />
+      <pointLight position={[10, 30, 10]} />
       <primitive
         object={computer.scene}
         scale={1.2}
