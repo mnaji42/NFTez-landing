@@ -1,0 +1,7 @@
+export { default as Navbar } from "./Navbar"
+export { default as Hero } from "./Hero"
+export { default as Loader } from "./Loader"
+export { default as Team } from "./Team"
+export { default as ScrollDown } from "./ScrollDown"
+export { default as Roadmap } from "./Roadmap"
+export { default as ApiDocs } from "./ApiDocs"

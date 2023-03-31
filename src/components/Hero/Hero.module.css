@@ -1,0 +1,7 @@
+.container {
+  @apply relative w-full h-screen mx-auto;
+}
+
+.title {
+  @apply absolute inset-0 flex w-full ml-16 md:ml-0 md:justify-end mt-52 z-40 md:w-[60%];
+}

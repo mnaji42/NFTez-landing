@@ -1,0 +1,23 @@
+.container {
+  @apply xs:w-[250px] w-full;
+}
+
+.subContainer {
+  @apply w-full p-[1px] rounded-[20px];
+}
+
+.content {
+  @apply bg-tertiary rounded-[20px] min-h-[280px] flex justify-evenly items-center flex-col;
+}
+
+.icon {
+  @apply w-16 h-16 object-contain;
+}
+
+.name {
+  @apply text-white text-[24px] font-bold text-center;
+}
+
+.post {
+  @apply text-white text-[18px] font-bold text-center mt-2;
+}

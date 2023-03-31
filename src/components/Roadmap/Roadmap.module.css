@@ -1,0 +1,14 @@
+.container {
+  /* Your styles here */
+  @apply mb-36;
+}
+
+.roadmapContainer {
+  @apply mt-20 flex flex-col;
+}
+
+.date {
+  @apply mx-5;
+  font-size: 20px !important;
+  transform: translateY(-4px);
+}

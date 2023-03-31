@@ -1,0 +1,8 @@
+.container {
+  /* Your styles here */
+  @apply text-center;
+}
+
+.cardContainer {
+  @apply mt-10 flex flex-wrap gap-10 justify-center;
+}

@@ -1,0 +1,32 @@
+.container {
+  @apply flex flex-row rounded-lg overflow-hidden;
+}
+
+.gutter {
+  @apply bg-[#252526] p-4;
+}
+
+.gutter ol {
+  list-style-type: none;
+  counter-reset: line;
+}
+
+.gutter li {
+  @apply text-[#d4d4d4];
+  counter-increment: line;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.code {
+  @apply bg-[#1e1e1e] p-4;
+}
+
+.code pre {
+  @apply m-0;
+  margin: 0;
+}
+
+.code code {
+  @apply text-base;
+}

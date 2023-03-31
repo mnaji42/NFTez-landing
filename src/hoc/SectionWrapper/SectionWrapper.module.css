@@ -1,0 +1,7 @@
+.container {
+  @apply max-w-7xl mx-auto relative z-0 min-h-screen box-border;
+}
+
+.componentContainer {
+  @apply flex justify-center;
+}
