@@ -23,7 +23,6 @@ const Computers = () => {
       />
       <pointLight
         position={[10, 30, 10]}
-        angle={0.12}
         penumbra={1}
         intensity={1}
         castShadow
