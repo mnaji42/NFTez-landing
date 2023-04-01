@@ -1,5 +1,9 @@
 .container {
-  @apply flex flex-row rounded-lg overflow-hidden;
+  @apply rounded-lg overflow-hidden;
+}
+
+.container.withLine {
+  @apply flex flex-row;
 }
 
 .gutter {

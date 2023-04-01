@@ -6,6 +6,30 @@
   @apply w-[400px] overflow-hidden;
 }
 
+.button {
+  @apply m-4 text-primary;
+
+  margin-right: 0.625rem;
+  margin-left: 0.625rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3.625rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: -1px 1px 10px 0 rgba(2,2,2,.1), 1px 1px 3px 0 rgba(0,0,0,.05);
+  font-size: 1.1rem;
+  line-height: 120%;
+  font-weight: 500;
+  transition: transform 0.4s;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button.active {
+ background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+ color: white;
+}
+
 .violet {
   @apply text-[#D291FF];
 }

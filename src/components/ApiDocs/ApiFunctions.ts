@@ -1,44 +1,52 @@
 import React from "react"
 
-// 1. GetNFTCollection(collectionAddress)
+// 1. GetCollectionAttributes
+const getCollectionAttributes = {
+  comment: "Retrieve the complete list of the attributes in a collection",
+  name: "getCollectionAttributes",
+  variable: "contractAddress",
+}
+
+// 2. GetNFTCollection
 const getNFTCollection = {
   comment: "Retrieve the complete list of NFTs in a collection",
   name: "getNFTCollection",
-  variable: "collectionAddress",
+  variable: "contractAddress",
 }
 
-// 2. GetNFTAttributes
-const getNFTAttributes = {
-  comment: "Retrieve all attributes of an NFT",
-  name: "getNFTAttributes",
-  variable: "nftAddress",
-}
-
-// 3. SummarizeNFTAttributes ( À discuter )
-const summarizeNFTAttributes = {
-  comment: "Retrieve all attributes of a collection",
-  name: "summarizeNFTAttributes",
-  variable: "collectionAddress",
+//3 getNFTMetadata
+const getNFTMetadata = {
+  comment: "Retrieve the link to the metadata of nft",
+  name: "getNFTMetadata",
+  variable: "contractAddress, tokenId",
 }
 
 // 4. GetWalletNFTs
 const getWalletNFTs = {
-  comment: "Retrieve who is the owner of an nft",
+  comment: "Retrieve all nft in a wallet",
   name: "getWalletNFTs",
-  variable: "nftAddress",
+  variable: "walletAddress",
 }
 
-// 5. verifyOwnership(walletAddress, contractAdress)
+// 5. verifyTokenOwnership
 const verifyOwnership = {
-  comment: "Retrieve the complete list of NFTs in a collection",
+  comment: "Verify if a wallet have any nft in a given collection",
   name: "verifyOwnership",
+  variable: "contractAddress, walletAddress",
+}
+
+// 6. verifyTokenOwnership
+const verifyTokenOwnership = {
+  comment: "Verify if a wallet have a given nft",
+  name: "verifyTokenOwnership",
   variable: "walletAddress",
 }
 
 export default [
+  getCollectionAttributes,
   getNFTCollection,
-  getNFTAttributes,
-  summarizeNFTAttributes,
+  getNFTMetadata,
   getWalletNFTs,
   verifyOwnership,
+  verifyTokenOwnership,
 ]

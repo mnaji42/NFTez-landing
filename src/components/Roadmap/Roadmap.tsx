@@ -44,7 +44,6 @@ const Roadmap: FC<RoadmapProps> = ({ className }) => {
               contentArrowStyle={{
                 borderRight: "7px solid  #444444",
               }}
-              date={goal.date}
               dateClassName={s.date}
               iconStyle={{ background: goal.iconBg }}
               icon={
