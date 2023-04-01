@@ -1,34 +1,27 @@
-import React, { FC } from "react"
-
+import React, { FC, ReactElement } from "react"
 import cn from "classnames"
 import s from "./CodeEditor.module.css"
 
 interface CodeEditorProps {
   className?: string
+  nbLigne: number
+  children: ReactElement
 }
 
-const CodeEditor: FC<CodeEditorProps> = ({ className }) => {
+const CodeEditor: FC<CodeEditorProps> = ({ className, nbLigne, children }) => {
+  const lines = []
+  for (let i = 1; i <= nbLigne; i++) {
+    lines.push(<li key={i}>{i}</li>)
+  }
+
   return (
     <div className={cn(s.container, className)}>
       <div className={s.gutter}>
-        <ol>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-        </ol>
+        <ol>{lines}</ol>
       </div>
       <div className={s.code}>
         <pre>
-          <code>{`function helloWorld() {
-	console.log("Hello, world!");
-}`}</code>
+          <code>{children}</code>
         </pre>
       </div>
     </div>

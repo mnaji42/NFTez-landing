@@ -1,3 +1,35 @@
 .container {
   /* Your styles here */
 }
+
+.code {
+  @apply w-[400px] overflow-hidden;
+}
+
+.violet {
+  @apply text-[#D291FF];
+}
+
+.yellow {
+  @apply text-[#F7F948];
+}
+
+.blue {
+  @apply text-[#6CE7FA];
+}
+
+.orange {
+  @apply text-[#B67606;]
+}
+
+.secondary {
+  @apply text-[#aaa6c3];
+}
+
+.yellowFunc {
+  @apply text-[#FCFFA2];
+}
+
+.green {
+  @apply text-[#1DCA18];
+}
