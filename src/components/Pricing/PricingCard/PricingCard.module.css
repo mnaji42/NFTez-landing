@@ -79,7 +79,7 @@
   border: 1px solid #020202;
   border-radius: 0.625rem;
   background-color: transparent;
-  color: white;
+  color: #0057da;
   background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   font-size: 1.1rem;
   font-weight: 700;
@@ -91,14 +91,8 @@
   .button:hover {
     background-color: #0057da;
     color: #ffffff;
-    transform: scale(1.05);
+    transform: scale(1.02);
     cursor: pointer;
-  }
-
-  /* Style par défaut */
-  .button:not(:hover) {
-    border-color: #0057da;
-    color: #0057da;
   }
 
 .line {
