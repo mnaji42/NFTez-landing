@@ -12,8 +12,8 @@ import s from "./PricingCard.module.css"
   index: number
   title: string
   pricingDescription: string
-  price: number | null
-  textSize: string,
+  price?: number
+  textSize: string
   textButton: string
   planText: string[]
 }
