@@ -13,9 +13,9 @@ const RoadmapCard: FC<RoadmapCardProps> = ({ className, goal }) => {
       <div className={s.date}>{goal.date}</div>
       <div>
         <h3 className={s.title}>{goal.title}</h3>
-        <p className={s.subTitle} style={{ margin: 0 }}>
+        {/* <p className={s.subTitle} style={{ margin: 0 }}>
           {goal.company_name}
-        </p>
+        </p> */}
       </div>
 
       <ul className={s.pointContainer}>

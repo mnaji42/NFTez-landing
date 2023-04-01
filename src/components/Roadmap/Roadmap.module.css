@@ -3,6 +3,22 @@
   @apply mb-36;
 }
 
+/* .logo:nth-child(even) {
+  transform: translateX(400px);
+}
+
+.logo:nth-child(odd) {
+  transform: translateX(-400px);
+} */
+
+/* .element:nth-child(even) {
+  transform: translateX(33%);
+}
+
+.element:nth-child(odd) {
+  transform: translateX(-33%);
+} */
+
 .roadmapContainer {
   @apply mt-20 flex flex-col;
 }
