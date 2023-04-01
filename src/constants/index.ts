@@ -108,13 +108,11 @@ const team = [
 
 const pricing = [
   {
-    pricingTag: "INDUSTRY LEADING",
     title: "Free",
     pricingDescription: "The most powerful free tier in blockchain.",
     price: 0,
     textSize: "Up to 300,000,000 compute units/mo",
     textButton: "Get started",
-    planTitle: "Plan includes",
     planText: [
       "Supernode, Build, Monitor, and Notify",
       "Enhanced APIs",
@@ -124,16 +122,13 @@ const pricing = [
       "5 apps",
       "24/7 Discord support",
     ],
-    lastText: "No credit card required, start building for free.",
   },
   {
-    pricingTag: "INDUSTRY LEADING",
     title: "Free",
     pricingDescription: "The most powerful free tier in blockchain.",
     price: 0,
     textSize: "Up to 300,000,000 compute units/mo",
     textButton: "Get started",
-    planTitle: "Plan includes",
     planText: [
       "Supernode, Build, Monitor, and Notify",
       "Enhanced APIs",
@@ -143,16 +138,13 @@ const pricing = [
       "5 apps",
       "24/7 Discord support",
     ],
-    lastText: "No credit card required, start building for free.",
   },
   {
-    pricingTag: "INDUSTRY LEADING",
     title: "Free",
     pricingDescription: "The most powerful free tier in blockchain.",
     price: 0,
     textSize: "Up to 300,000,000 compute units/mo",
     textButton: "Get started",
-    planTitle: "Plan includes",
     planText: [
       "Supernode, Build, Monitor, and Notify",
       "Enhanced APIs",
@@ -162,7 +154,6 @@ const pricing = [
       "5 apps",
       "24/7 Discord support",
     ],
-    lastText: "No credit card required, start building for free.",
   },
 ]
 
