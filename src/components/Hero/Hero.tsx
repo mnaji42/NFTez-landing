@@ -3,6 +3,7 @@ import React, { FC, useRef, useEffect } from "react"
 import { useLandingState } from "../../context/LandingStateContext"
 import { sections } from "../../constants"
 import { ScrollDown } from "../"
+import { motion } from "framer-motion"
 import { ComputersCanvas } from "../canvas"
 import Title from "./Title"
 
@@ -16,6 +17,21 @@ interface HeroProps {
 const Hero: FC<HeroProps> = ({ className }) => {
   const { setHash } = useLandingState()
   const spanRef = useRef(null)
+
+  const schemaVariants = {
+    hidden: {
+      x: 200,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: 2.5,
+      },
+    },
+  }
   useEffect(() => {
     const spanElement = spanRef.current
 
@@ -35,7 +51,10 @@ const Hero: FC<HeroProps> = ({ className }) => {
         &nbsp;
       </span>
       <Title className={s.title} />
-      <ComputersCanvas />
+      <motion.div variants={schemaVariants} initial="hidden" animate="visible">
+        <img src="./visuel_landing.png" alt="schema" className={s.schema} />
+      </motion.div>
+      {/* <ComputersCanvas /> */}
       {sections.length ? (
         <ScrollDown scrollTo={sections[0]} visibleDelay={1} />
       ) : null}

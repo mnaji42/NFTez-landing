@@ -137,7 +137,7 @@ const Title: FC<TitleProps> = ({ className }) => {
             initial="hidden"
             animate="visible"
           >
-            Nft Api for Tezos
+            API for builders on Tezos
           </motion.p>
         </div>
       </div>

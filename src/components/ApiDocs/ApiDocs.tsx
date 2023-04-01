@@ -35,6 +35,7 @@ const ApiDocs: FC<ApiDocsProps> = ({ className }) => {
   }
   return (
     <div className={cn(s.container, className)}>
+      {/* <TestSvg /> */}
       <motion.div variants={textVariant(0)}>
         <p className={"sectionSubText text-center"}>Save time</p>
         <h2 className={"sectionHeadText text-center"}>SDK</h2>

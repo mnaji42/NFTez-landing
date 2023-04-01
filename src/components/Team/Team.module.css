@@ -1,7 +1,7 @@
 .container {
   /* Your styles here */
   @apply text-center;
-  transform: translateY(-8px);
+  transform: translateY(-42px);
 }
 
 .cardContainer {

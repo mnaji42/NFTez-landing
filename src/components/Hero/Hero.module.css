@@ -1,7 +1,12 @@
 .container {
-  @apply relative w-full h-screen mx-auto;
+  @apply flex h-screen justify-center items-center;
 }
 
 .title {
-  @apply absolute inset-0 flex w-full ml-16 md:ml-0 md:justify-end mt-52 z-40 md:w-[60%];
+  @apply mr-16;
+}
+
+.schema {
+  @apply ml-16;
+  width: 550px;
 }
