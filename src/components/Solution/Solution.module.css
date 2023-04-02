@@ -2,6 +2,14 @@
   /* Your styles here */
 }
 
+.buttonContainer {
+  @apply absolute w-[470px] flex flex-wrap;
+  /* transform: translateY(250px); */
+}
+.content {
+@apply relative flex justify-around items-end;
+}
+
 .code {
   @apply w-[400px] overflow-hidden;
 }
@@ -56,4 +64,11 @@
 
 .green {
   @apply text-[#1DCA18];
+}
+
+.resContainer {
+  @apply overflow-hidden;
+  width: 60vw;
+  max-height: 60vh;
+  overflow: scroll;
 }

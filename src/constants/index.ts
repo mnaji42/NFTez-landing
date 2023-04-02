@@ -102,7 +102,7 @@ const pricing = [
     title: "Free*",
     pricingDescription: "The most powerful free tier in blockchain.",
     price: 0,
-    textSize: "Up to 60,000 requests per month*",
+    textSize: "Up to 10,000 requests per month*",
     textButton: "Get started",
     planText: [
       "Limited access to API and SDK",
@@ -114,8 +114,8 @@ const pricing = [
   {
     title: "Growth",
     pricingDescription: "To empower scaling project",
-    price: 49,
-    textSize: "Up to 1,000,000 requests per month",
+    price: 99,
+    textSize: "Up to 100,000 requests per month",
     textButton: "Get started",
     planText: [
       "Everything free and plus",
