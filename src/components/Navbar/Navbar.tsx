@@ -101,6 +101,12 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
               {section}
             </motion.li>
           ))}
+          <motion.li
+            className={cn(s.navLink, s.documentation)}
+            variants={linkVariants}
+          >
+            Documentation
+          </motion.li>
         </motion.ul>
       </div>
     </motion.nav>

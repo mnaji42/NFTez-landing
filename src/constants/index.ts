@@ -126,7 +126,7 @@ const pricing = [
   },
   {
     title: "Enterprise",
-    pricingDescription: "The most powerful free tier in blockchain.",
+    pricingDescription: `Volume pricing & enterprise support `,
     textSize: "Custom plan",
     textButton: "Get started",
     planText: [
@@ -135,6 +135,6 @@ const pricing = [
       "Onboarding and mission support",
     ],
   },
-];
+]
 
 export { sections, roadmap, team, pricing }

@@ -52,3 +52,11 @@
 .navLink.active:before {
   transform: scaleX(1);
 }
+
+.navLink.documentation {
+  @apply text-[#915eff];
+}
+
+.navLink.documentation:before {
+  @apply bg-[#915eff];
+}
