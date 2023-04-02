@@ -105,7 +105,9 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
             className={cn(s.navLink, s.documentation)}
             variants={linkVariants}
           >
-            Documentation
+            <a href="https://nftez-doc.vercel.app" target="_blank">
+              Documentation
+            </a>
           </motion.li>
         </motion.ul>
       </div>

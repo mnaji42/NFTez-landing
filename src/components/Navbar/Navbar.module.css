@@ -57,6 +57,6 @@
   @apply text-[#915eff];
 }
 
-.navLink.documentation:before {
-  @apply bg-[#915eff];
+.navLink.documentation:hover {
+  @apply text-white;
 }
