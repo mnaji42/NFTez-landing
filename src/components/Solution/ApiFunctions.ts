@@ -4,6 +4,7 @@ import React from "react"
 const getCollectionAttributes = {
   comment: "Retrieve the complete list of the attributes in a collection",
   name: "getCollectionAttributes",
+  title: "Collection Attributes",
   variable: "contractAddress",
 }
 
@@ -11,6 +12,7 @@ const getCollectionAttributes = {
 const getNFTCollection = {
   comment: "Retrieve the complete list of NFTs in a collection",
   name: "getNFTCollection",
+  title: "NFT Collection",
   variable: "contractAddress",
 }
 
@@ -18,6 +20,7 @@ const getNFTCollection = {
 const getNFTMetadata = {
   comment: "Retrieve the link to the metadata of nft",
   name: "getNFTMetadata",
+  title: "NFT Metadata",
   variable: "contractAddress, tokenId",
 }
 
@@ -25,6 +28,7 @@ const getNFTMetadata = {
 const getWalletNFTs = {
   comment: "Retrieve all nft in a wallet",
   name: "getWalletNFTs",
+  title: "Wallet NFTs",
   variable: "walletAddress",
 }
 
@@ -32,6 +36,7 @@ const getWalletNFTs = {
 const verifyOwnership = {
   comment: "Verify if a wallet have any nft in a given collection",
   name: "verifyOwnership",
+  title: "Verify Ownership",
   variable: "contractAddress, walletAddress",
 }
 
@@ -39,6 +44,7 @@ const verifyOwnership = {
 const verifyTokenOwnership = {
   comment: "Verify if a wallet have a given nft",
   name: "verifyTokenOwnership",
+  title: "Verify Token Ownership",
   variable: "walletAddress",
 }
 

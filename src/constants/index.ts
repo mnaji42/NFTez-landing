@@ -5,7 +5,7 @@ interface Section {
   title: string
 }
 
-const sections: Array<string> = ["Apidocs", "Team", "Roadmap", "Pricing"]
+const sections: Array<string> = ["Solution", "Team", "Roadmap", "Pricing"]
 
 const roadmap = [
   {

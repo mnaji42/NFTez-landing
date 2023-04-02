@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react"
+import React, { FC, useState, useEffect } from "react"
 
 import { motion } from "framer-motion"
 import apiFunctions from "./ApiFunctions"
@@ -10,14 +10,21 @@ import { fadeIn, textVariant } from "../../utils/motion"
 import { SectionWrapper } from "../../hoc"
 import CodeEditor from "./CodeEditor"
 import cn from "classnames"
-import s from "./ApiDocs.module.css"
+import s from "./Solution.module.css"
 
-interface ApiDocsProps {
+interface SolutionProps {
   className?: string
 }
 
-const ApiDocs: FC<ApiDocsProps> = ({ className }) => {
+const Solution: FC<SolutionProps> = ({ className }) => {
   const [funcSelected, setFuncSelected] = useState<string>("")
+  const [resApi, setResApi] = useState("")
+
+  useEffect(() => {
+    ;(async () => {
+      console.log("yoyoyo")
+    })()
+  }, [screen])
   const functionToString = (f: any): string => {
     const span = (children: string, className: string): string => {
       return `<span class=${className}>${children}</span>`
@@ -38,7 +45,7 @@ const ApiDocs: FC<ApiDocsProps> = ({ className }) => {
       {/* <TestSvg /> */}
       <motion.div variants={textVariant(0)}>
         <p className={"sectionSubText text-center"}>Save time</p>
-        <h2 className={"sectionHeadText text-center"}>SDK</h2>
+        <h2 className={"sectionHeadText text-center"}>Our solution</h2>
       </motion.div>
       <div className="flex">
         {apiFunctions.map((f) => (
@@ -46,7 +53,7 @@ const ApiDocs: FC<ApiDocsProps> = ({ className }) => {
             className={cn(s.button, { [s.active]: funcSelected === f.name })}
             onClick={() => setFuncSelected(f.name)}
           >
-            {f.name}
+            {f.title}
           </button>
         ))}
       </div>
@@ -91,13 +98,9 @@ const ApiDocs: FC<ApiDocsProps> = ({ className }) => {
           </div>
         </CodeEditor>
       </motion.div>
+      <motion.div></motion.div>
     </div>
   )
 }
 
-export default SectionWrapper(ApiDocs, "Apidocs")
-
-// import { getNFTAttributes }  from "nftez"
-
-// // Retrieve all attributes of an NFT
-// getNFTAttributes(nftAddress)|
+export default SectionWrapper(Solution, "Solution")

@@ -3,14 +3,14 @@ import { BrowserRouter } from "react-router-dom"
 
 import { LandingStateProvider } from "./context/LandingStateContext"
 import { sections } from "./constants"
-import { Navbar, Hero, Team, Roadmap, ApiDocs, Pricing } from "./components"
+import { Navbar, Hero, Team, Roadmap, Solution, Pricing } from "./components"
 
 import s from "./App.module.css"
 
 const Section: FC<{ section: string }> = ({ section }) => {
   switch (section) {
-    case "Apidocs":
-      return <ApiDocs />
+    case "Solution":
+      return <Solution />
     case "Roadmap":
       return <Roadmap />
     case "Team":
