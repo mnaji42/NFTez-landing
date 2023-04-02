@@ -32,6 +32,7 @@ const Pricing: FC<PricingProps> = ({ className }) => {
           />
         ))}
       </div>
+      <p className={s.asterisk}>* Beyond that, you can opt for a pay-as-you-go solution, where every 100 requests are billed at $0.08.</p>
     </div>
   )
 }

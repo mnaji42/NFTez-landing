@@ -72,7 +72,7 @@ const team = [
   },
   {
     name: "Hicham",
-    post: "Finance",
+    post: "Product",
     icon: creator,
   },
   {
@@ -99,53 +99,42 @@ const team = [
 
 const pricing = [
   {
-    title: "Free",
+    title: "Free*",
     pricingDescription: "The most powerful free tier in blockchain.",
     price: 0,
-    textSize: "Up to 300,000,000 compute units/mo",
+    textSize: "Up to 60,000 requests per month*",
     textButton: "Get started",
     planText: [
-      "Supernode, Build, Monitor, and Notify",
-      "Enhanced APIs",
-      "Multichain mainnets and testnets",
+      "Limited access to API and SDK",
+      "In mainnets and testnets",
       "No daily request limits",
-      "Full archive data",
-      "5 apps",
+      "Open source code",
+    ],
+  },
+  {
+    title: "Growth",
+    pricingDescription: "To empower scaling project",
+    price: 49,
+    textSize: "Up to 1,000,000 requests per month",
+    textButton: "Get started",
+    planText: [
+      "Everything free and plus",
+      "Access to all API and SDK features",
+      "2x higher throughput",
       "24/7 Discord support",
     ],
   },
   {
-    title: "Free",
+    title: "Enterprise",
     pricingDescription: "The most powerful free tier in blockchain.",
-    price: 0,
-    textSize: "Up to 300,000,000 compute units/mo",
+    textSize: "Custom plan",
     textButton: "Get started",
     planText: [
-      "Supernode, Build, Monitor, and Notify",
-      "Enhanced APIs",
-      "Multichain mainnets and testnets",
-      "No daily request limits",
-      "Full archive data",
-      "5 apps",
-      "24/7 Discord support",
+      "Everything Growth and plus",
+      "Customized features and integrations to suit your requirements",
+      "Onboarding and mission support",
     ],
   },
-  {
-    title: "Free",
-    pricingDescription: "The most powerful free tier in blockchain.",
-    price: 0,
-    textSize: "Up to 300,000,000 compute units/mo",
-    textButton: "Get started",
-    planText: [
-      "Supernode, Build, Monitor, and Notify",
-      "Enhanced APIs",
-      "Multichain mainnets and testnets",
-      "No daily request limits",
-      "Full archive data",
-      "5 apps",
-      "24/7 Discord support",
-    ],
-  },
-]
+];
 
 export { sections, roadmap, team, pricing }

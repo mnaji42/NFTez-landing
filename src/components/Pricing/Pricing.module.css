@@ -6,3 +6,9 @@
 .cardContainer {
   @apply mt-10 flex flex-wrap gap-10 justify-center;
 }
+
+.asterisk {
+  margin-top: 72px;
+  text-align: start;
+  font-size: 20px;
+}
