@@ -2,20 +2,29 @@
   /* Your styles here */
 }
 
-.buttonContainer {
-  @apply absolute w-[470px] flex flex-wrap;
-  /* transform: translateY(250px); */
-}
 .content {
-@apply relative flex justify-around items-end;
+  @apply flex items-stretch mt-10;
+}
+
+.rightContainer {
+  @apply w-[550px] m-2 flex flex-col justify-between z-10;
+}
+
+.leftContainer {
+  @apply m-2;
+}
+
+.buttonContainer {
+  @apply flex flex-wrap justify-center;
+  /* transform: translateY(250px); */
 }
 
 .code {
-  @apply w-[400px] overflow-hidden;
+  @apply overflow-hidden;
 }
 
 .button {
-  @apply m-4 text-primary;
+  @apply m-4 text-[#050816];
 
   margin-right: 0.625rem;
   margin-left: 0.625rem;
@@ -26,7 +35,8 @@
   font-size: 1.1rem;
   line-height: 120%;
   font-weight: 500;
-  transition: transform 0.4s;
+  /* opacity: 0; */
+  /* transition: transform 0.4s; */
 }
 
 .button:hover {
@@ -68,7 +78,7 @@
 
 .resContainer {
   @apply overflow-hidden;
-  width: 60vw;
+  width: calc(100vw - 900px);
   max-height: 60vh;
   overflow: scroll;
 }

@@ -23,7 +23,7 @@
 }
 
 .code {
-  @apply bg-[#1e1e1e] p-4;
+  @apply bg-[#1e1e1e] p-4 w-full;
 }
 
 .code pre {

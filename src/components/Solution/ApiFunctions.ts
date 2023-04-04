@@ -8,15 +8,7 @@ const getCollectionAttributes = {
   variable: "contractAddress",
 }
 
-// 2. GetNFTCollection
-const getNFTCollection = {
-  comment: "Retrieve the complete list of NFTs in a collection",
-  name: "getNFTCollection",
-  title: "NFT Collection",
-  variable: "contractAddress",
-}
-
-//3 getNFTMetadata
+//2 getNFTMetadata
 const getNFTMetadata = {
   comment: "Retrieve the link to the metadata of nft",
   name: "getNFTMetadata",
@@ -24,20 +16,28 @@ const getNFTMetadata = {
   variable: "contractAddress, tokenId",
 }
 
-// 4. GetWalletNFTs
-const getWalletNFTs = {
-  comment: "Retrieve all nft in a wallet",
-  name: "getWalletNFTs",
-  title: "Wallet NFTs",
-  variable: "walletAddress",
+// 3. GetNFTCollection
+const getNFTCollection = {
+  comment: "Retrieve the complete list of NFTs in a collection",
+  name: "getNFTCollection",
+  title: "NFT Collection",
+  variable: "contractAddress",
 }
 
-// 5. verifyTokenOwnership
+// 4. verifyTokenOwnership
 const verifyOwnership = {
   comment: "Verify if a wallet have any nft in a given collection",
   name: "verifyOwnership",
   title: "Verify Ownership",
   variable: "contractAddress, walletAddress",
+}
+
+// 5. GetWalletNFTs
+const getWalletNFTs = {
+  comment: "Retrieve all nft in a wallet",
+  name: "getWalletNFTs",
+  title: "Wallet NFTs",
+  variable: "walletAddress",
 }
 
 // 6. verifyTokenOwnership
@@ -50,9 +50,9 @@ const verifyTokenOwnership = {
 
 export default [
   getCollectionAttributes,
-  getNFTCollection,
   getNFTMetadata,
-  getWalletNFTs,
+  getNFTCollection,
   verifyOwnership,
+  getWalletNFTs,
   verifyTokenOwnership,
 ]
