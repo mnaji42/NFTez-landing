@@ -9,34 +9,57 @@ import sdk from "test-tezos"
 import { fadeIn, textVariant } from "../../utils/motion"
 import { SectionWrapper } from "../../hoc"
 import CodeEditor from "./CodeEditor"
+import { Input } from "../"
 import cn from "classnames"
 import s from "./Solution.module.css"
+import Spinner from "../Spinner"
 
 interface SolutionProps {
   className?: string
 }
 
+const buttonsVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+}
+
 const Solution: FC<SolutionProps> = ({ className }) => {
   const [funcSelected, setFuncSelected] = useState<string>("")
   const [resApi, setResApi] = useState<{} | null>("")
+  const [loading, setLoading] = useState<boolean>(false)
+  const [contractAddress, setContractAddress] = useState<string>(
+    "KT1NVvPsNDChrLRH5K2cy6Sc9r1uuUwdiZQd"
+  )
+  const [walletAddress, setWalletAddress] = useState<string>(
+    "tz1eQzGZXy36xx6xDT1Xp6dUdHS2dXowKdCq"
+  )
 
   useEffect(() => {
     ;(async () => {
       let res = null
+      setLoading(true)
       if (funcSelected === "getNFTCollection") {
-        res = await sdk.getNFTCollection("KT1NVvPsNDChrLRH5K2cy6Sc9r1uuUwdiZQd")
+        res = await sdk.getNFTCollection(contractAddress)
       } else if (funcSelected === "getWalletNFTs") {
-        res = await sdk.getWalletNFTs("tz1eQzGZXy36xx6xDT1Xp6dUdHS2dXowKdCq")
+        res = await sdk.getWalletNFTs(walletAddress)
       } else if (funcSelected === "verifyOwnership") {
         const isOwner = await sdk.verifyOwnership(
-          "tz1eQzGZXy36xx6xDT1Xp6dUdHS2dXowKdCq",
-          "KT1NVvPsNDChrLRH5K2cy6Sc9r1uuUwdiZQd"
+          walletAddress,
+          contractAddress
         )
         res = {
           isOwner,
         }
       }
       setResApi(res)
+      setLoading(false)
     })()
   }, [funcSelected])
 
@@ -77,6 +100,11 @@ const Solution: FC<SolutionProps> = ({ className }) => {
 
   return (
     <div className={cn(s.container, className)}>
+      {loading ? (
+        <div className="absolute inset-0 flex justify-center items-center">
+          <Spinner />
+        </div>
+      ) : null}
       <div className="mt-8">
         <motion.div variants={textVariant(0)}>
           <p className={"sectionSubText text-center"}>Save time</p>
@@ -84,21 +112,24 @@ const Solution: FC<SolutionProps> = ({ className }) => {
         </motion.div>
         <div className={s.content}>
           <div className={s.rightContainer}>
-            <div className={s.buttonContainer}>
+            <motion.div
+              className={s.buttonContainer}
+              variants={buttonsVariants}
+            >
               {apiFunctions.map((f, i) => (
-                <motion.button
+                <button
+                  key={`buttonFunc-${i}`}
                   className={cn(s.button, {
-                    [s.active]: funcSelected === f.name,
+                    ["violet-gradient text-white"]: funcSelected === f.name,
                   })}
-                  onClick={() => setFuncSelected(f.name)}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: i * 0.2 + 0.5 }}
+                  onClick={() => {
+                    if (!loading) setFuncSelected(f.name)
+                  }}
                 >
                   {f.title}
-                </motion.button>
+                </button>
               ))}
-            </div>
+            </motion.div>
             <div className={s.sdkContainer}>
               <motion.div
                 variants={fadeIn("right", "spring", 1, 0.75)}
@@ -106,8 +137,7 @@ const Solution: FC<SolutionProps> = ({ className }) => {
                   s.subContainer,
                   "shadow-card green-pink-gradient rounded-lg mb-2"
                 )}
-                // onAnimationComplete={() => setFuncSelected("verifyOwnership")}
-                // onAnimationStart={() => setFuncSelected("verifyOwnership")}
+                onAnimationComplete={() => setFuncSelected("verifyOwnership")}
               >
                 <CodeEditor nbLigne={2} withLine={false}>
                   <Typed
@@ -144,6 +174,10 @@ const Solution: FC<SolutionProps> = ({ className }) => {
             </div>
           </div>
           <div className={s.leftContainer}>
+            <div>
+              <h3>Try it yourself</h3>
+              <Input type="text" required label="Hello" />
+            </div>
             <motion.div
               variants={fadeIn("left", "spring", 1.25, 0.75)}
               className={cn(
@@ -157,7 +191,6 @@ const Solution: FC<SolutionProps> = ({ className }) => {
                   variants={jsonVariants}
                   initial="hidden"
                   animate="firstLoad"
-                  onAnimationStart={() => setFuncSelected("verifyOwnership")}
                 >
                   {resApi ? (
                     <motion.pre
@@ -173,14 +206,13 @@ const Solution: FC<SolutionProps> = ({ className }) => {
                       initial="hidden"
                       animate="visible"
                     >
-                      Fonction bientôt disponible
+                      Coming soon...
                     </motion.div>
                   )}
                 </motion.div>
               </CodeEditor>
             </motion.div>
           </div>
-          {/* </div> */}
         </div>
       </div>
     </div>

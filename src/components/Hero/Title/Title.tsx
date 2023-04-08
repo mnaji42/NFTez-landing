@@ -1,6 +1,7 @@
 import React, { FC } from "react"
 
 import { motion } from "framer-motion"
+import useScreen from "../../../hooks/useScreen"
 import cn from "classnames"
 import s from "./Title.module.css"
 
@@ -29,19 +30,6 @@ const circleVariants = {
     scale: 1,
     transition: {
       duration: 0.5,
-    },
-  },
-}
-
-const subLineVariants = {
-  hidden: {
-    height: 0,
-  },
-  visible: {
-    height: 340,
-    transition: {
-      duration: 1,
-      delay: 0.5,
     },
   },
 }
@@ -89,6 +77,20 @@ const subTitleVariants = {
 }
 
 const Title: FC<TitleProps> = ({ className }) => {
+  const screen = useScreen()
+
+  const subLineVariants = {
+    hidden: {
+      height: 0,
+    },
+    visible: {
+      height: screen === "xs" ? 260 : 340,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+      },
+    },
+  }
   return (
     <div className={cn(s.container, className)}>
       <div className={s.subContainer}>
@@ -106,7 +108,6 @@ const Title: FC<TitleProps> = ({ className }) => {
         </motion.div>
         <div>
           <motion.h1
-            // className="heroHeadText text-white"
             className={cn("heroHeadText", s.textWhite)}
             variants={titleVariants}
             initial="hidden"
@@ -116,14 +117,12 @@ const Title: FC<TitleProps> = ({ className }) => {
               Build dApps
             </motion.span>
             <motion.span
-              // className="block text-[#915eff]"
               className={cn("block", s.textPurple)}
               variants={titleSpanVariants}
             >
               Faster
             </motion.span>
             <motion.span
-              // className="block text-[#915eff]"
               className={cn("block", s.textPurple)}
               variants={titleSpanVariants}
             >
@@ -132,7 +131,6 @@ const Title: FC<TitleProps> = ({ className }) => {
           </motion.h1>
           <motion.p
             className="heroSubText text-white mt-2"
-            // className={cn("heroHeadText", ',t-2', s.textWhite)}
             variants={subTitleVariants}
             initial="hidden"
             animate="visible"

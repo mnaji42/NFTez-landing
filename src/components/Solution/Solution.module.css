@@ -3,20 +3,19 @@
 }
 
 .content {
-  @apply flex items-stretch mt-10;
+  @apply flex items-stretch mt-10 gap-8;
 }
 
 .rightContainer {
-  @apply w-[550px] m-2 flex flex-col justify-between z-10;
+  @apply w-[550px] flex flex-col justify-between z-10;
 }
 
 .leftContainer {
-  @apply m-2;
+  
 }
 
 .buttonContainer {
   @apply flex flex-wrap justify-center;
-  /* transform: translateY(250px); */
 }
 
 .code {
@@ -44,7 +43,6 @@
 }
 
 .button.active {
- background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
  color: white;
 }
 

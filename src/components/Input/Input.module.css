@@ -1,0 +1,35 @@
+.container {
+  @apply relative w-64;
+}
+
+.container input {
+  @apply w-full p-2.5 bg-primary rounded-lg outline-none text-white text-[1em];
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 0.4s;
+}
+
+.container span {
+  @apply absolute left-0 p-2.5 pointer-events-none text-[1em];
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.4s;
+}
+
+.container input:valid ~ span,
+.container input:focus ~ span {
+  @apply text-white text-[0.8em] px-2.5 py-0 rounded;
+  transform: translate(10px, -7px);
+  letter-spacing: 0 0.2em;
+  background: #804dee;
+  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #804dee 0%,
+    rgba(60, 51, 80, 0) 100%
+  );
+}
+
+.container input:valid,
+.container input:focus {
+  border: 1px solid rgba(255, 255, 255 0.5);
+}

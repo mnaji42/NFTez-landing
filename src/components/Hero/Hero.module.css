@@ -1,5 +1,5 @@
 .container {
-  @apply relative pt-28 min-h-screen;
+  @apply relative pt-24 min-h-screen;
 }
 
 .subContainer {

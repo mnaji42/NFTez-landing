@@ -2,12 +2,16 @@
   position: relative;
   width: 72px;
   height: 40px; /* Same as circle width */
-  border: 1px solid white;
-  border-color: rgba(255, 255, 255, 0.9);
   border-radius: 30px;
-  background-color: #aaa6c3;
-  color: #050816;
   z-index: 1;
+
+  background: #804dee;
+  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #804dee 0%,
+    rgba(60, 51, 80, 0) 100%
+  );
 }
 
 .circle {
@@ -20,6 +24,14 @@
   top: 0;
   z-index: -2px;
   transition: all 0.3s cubic-bezier(1, 0, 0.8, 1);
+
+  background: #804dee;
+  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 1) 70%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #804dee 0%,
+    rgba(60, 51, 80, 1) 70%
+  );
 }
 
 .btn:hover .circle {
@@ -80,7 +92,9 @@
 
 @screen sm {
   .btn {
+    color: #050816;
     width: 200px;
+    background: #aaa6c3;
   }
   .text {
     left: 50px;
