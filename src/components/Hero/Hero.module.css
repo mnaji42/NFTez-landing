@@ -1,12 +1,28 @@
 .container {
-  @apply flex h-screen justify-center items-center;
+  @apply relative pt-28 min-h-screen;
+}
+
+.subContainer {
+  @apply flex flex-col;
 }
 
 .title {
-  @apply mr-16;
+  @apply m-auto;
 }
 
-.schema {
-  @apply ml-16;
-  width: 550px;
+.schemaContainer {
+  @apply m-auto max-w-xl mt-8;
+}
+
+@screen lg {
+  .container {
+    @apply flex justify-center items-center p-8;
+  }
+
+  .subContainer {
+    @apply flex flex-row gap-4;
+  }
+  .title {
+    @apply min-w-fit;
+  }
 }

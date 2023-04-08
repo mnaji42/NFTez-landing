@@ -34,7 +34,6 @@ export const LandingStateProvider = ({
   const [state, setState] = useState<State>({
     hash: "",
   })
-  console.log(state.hash)
 
   const getNextSection = (section: string) => {
     const index = sections.indexOf(section)

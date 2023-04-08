@@ -1,3 +1,10 @@
+import { mobile, backend, creator, web } from "../assets"
+
+interface Section {
+  id: string
+  title: string
+}
+
 const sections: Array<string> = ["Solution", "Team", "Roadmap", "Pricing"]
 
 const roadmap = [
@@ -48,30 +55,37 @@ const team = [
   {
     name: "Adrien",
     post: "Business",
+    icon: creator,
   },
   {
     name: "Bastien",
     post: "Business",
+    icon: creator,
   },
   {
     name: "Hicham",
     post: "Product",
+    icon: creator,
   },
   {
     name: "Mehdi",
     post: "Front End Developer",
+    icon: web,
   },
   {
     name: "Sinane",
     post: "Back End Developer",
+    icon: mobile,
   },
   {
     name: "Wassim",
     post: "Back End Developer",
+    icon: mobile,
   },
   {
     name: "Julien",
     post: "Blockchain Developer",
+    icon: backend,
   },
 ]
 
