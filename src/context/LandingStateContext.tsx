@@ -1,9 +1,4 @@
-import React, {
-  createContext,
-  useState,
-  ReactElement,
-  useContext,
-} from "react"
+import React, { createContext, useState, ReactElement, useContext } from "react"
 
 import { scrollToId } from "../utils/scrollTo"
 
@@ -15,13 +10,14 @@ interface State {
 export interface LandingContextTypes extends State {
   setHash: (section: string, scroll: boolean) => void
   getNextSection: (section: string) => string | null
-
 }
 
 const defaultLandingSettings: LandingContextTypes = {
   hash: "",
   setHash: () => {},
-  getNextSection: () => {return ''}
+  getNextSection: () => {
+    return ""
+  },
 }
 
 export const LandingContext = createContext<LandingContextTypes>(
@@ -38,6 +34,7 @@ export const LandingStateProvider = ({
   const [state, setState] = useState<State>({
     hash: "",
   })
+  console.log(state.hash)
 
   const getNextSection = (section: string) => {
     const index = sections.indexOf(section)

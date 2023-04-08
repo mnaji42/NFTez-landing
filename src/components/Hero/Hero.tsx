@@ -4,7 +4,6 @@ import { useLandingState } from "../../context/LandingStateContext"
 import { sections } from "../../constants"
 import { ScrollDown } from "../"
 import { motion } from "framer-motion"
-import { ComputersCanvas } from "../canvas"
 import Title from "./Title"
 
 import cn from "classnames"
@@ -47,14 +46,13 @@ const Hero: FC<HeroProps> = ({ className }) => {
   }, [])
   return (
     <section className={cn(s.container, className)}>
-      <span className="hash-span absolute" ref={spanRef}>
+      <span className="hash-span absolute top-0 left-0" ref={spanRef}>
         &nbsp;
       </span>
       <Title className={s.title} />
       <motion.div variants={schemaVariants} initial="hidden" animate="visible">
         <img src="./visuel_landing.png" alt="schema" className={s.schema} />
       </motion.div>
-      {/* <ComputersCanvas /> */}
       {sections.length ? (
         <ScrollDown scrollTo={sections[0]} visibleDelay={1} />
       ) : null}
