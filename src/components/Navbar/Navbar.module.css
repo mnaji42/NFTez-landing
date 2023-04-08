@@ -1,5 +1,5 @@
 .container {
-  @apply w-full flex items-center py-5 fixed top-0 z-20 bg-primary sm:px-16 px-6;
+  @apply w-full flex items-center py-5 fixed top-0 z-20 bg-primary md:px-16 px-6;
 }
 
 .subContainer {
@@ -16,10 +16,6 @@
 
 .title {
   @apply text-white text-[18px] font-bold cursor-pointer flex ml-2;
-}
-
-.title span {
-  @apply sm:block hidden;
 }
 
 .navLinkContainer {

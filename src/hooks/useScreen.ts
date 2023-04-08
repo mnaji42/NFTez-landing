@@ -10,11 +10,12 @@ export enum Screen {
 }
 
 const SCREEN_WIDTH = {
-  xs: 450,
+  xs: 0,
   sm: 577,
   md: 768,
   lg: 992,
   xl: 1201,
+  "2xl": 1536,
 }
 
 const getScreenFromWidth = (width?: number): Screen | undefined => {

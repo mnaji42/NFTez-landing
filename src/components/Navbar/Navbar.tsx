@@ -10,7 +10,6 @@ import { MediaQueries } from "../"
 import DocButton from "./DocButton"
 
 import cn from "classnames"
-import { styles } from "../../styles"
 import s from "./Navbar.module.css"
 
 interface NavbarProps {
@@ -81,7 +80,7 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
   const { hash, setHash } = useLandingState()
 
   return (
-    <motion.nav className={cn(s.container, `${styles.paddingX}`, className)}>
+    <motion.nav className={cn(s.container, className)}>
       <div className={s.subContainer}>
         <Link
           className={s.link}
@@ -98,28 +97,36 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
             initial="hidden"
             animate="visible"
           >
-            NFTez&nbsp;<span>| Build Faster</span>
+            NFTez |&nbsp;
+            <MediaQueries hidden={["xs", "sm", "md"]}>
+              <>Build Faster</>
+            </MediaQueries>
+            <MediaQueries visible={["xs", "sm", "md"]}>
+              <>{hash?.length ? hash : "Build Faster"}</>
+            </MediaQueries>
           </motion.p>
         </Link>
-        <motion.ul
-          className={s.navLinkContainer}
-          variants={linksVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {sections.map((section) => (
-            <motion.li
-              key={`link-key-${section}`}
-              className={cn(s.navLink, {
-                [s.active]: hash === section,
-              })}
-              onClick={() => setHash(section, true)}
-              variants={linkVariants}
-            >
-              {section}
-            </motion.li>
-          ))}
-        </motion.ul>
+        <MediaQueries hidden={["xs", "sm", "md"]}>
+          <motion.ul
+            className={s.navLinkContainer}
+            variants={linksVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {sections.map((section) => (
+              <motion.li
+                key={`link-key-${section}`}
+                className={cn(s.navLink, {
+                  [s.active]: hash === section,
+                })}
+                onClick={() => setHash(section, true)}
+                variants={linkVariants}
+              >
+                {section}
+              </motion.li>
+            ))}
+          </motion.ul>
+        </MediaQueries>
         <motion.a
           href="https://nftez-doc.vercel.app"
           target="_blank"
