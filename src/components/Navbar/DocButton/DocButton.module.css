@@ -1,0 +1,79 @@
+.btn {
+  position: relative;
+  width: 210px;
+  height: 40px; /* Same as circle width */
+  border: 1px solid white;
+  border-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  background-color: #aaa6c3;
+  color: #050816;
+  z-index: 1;
+}
+
+.circle {
+  position: absolute;
+  width: 40px; /* Same as btn height */
+  height: 100%;
+  background-color: #050816;
+  border-radius: 30px;
+  left: 0;
+  top: 0;
+  z-index: -2px;
+  transition: all 0.3s cubic-bezier(1, 0, 0.8, 1);
+}
+
+.btn:hover .circle {
+  width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  border-color: rgba(255, 255, 255, 0.9);
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  top: 13px;
+  left: 10px;
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+
+.btn:hover .arrow {
+  left: 30px;
+}
+
+.arrow:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 3px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transform-origin: right;
+  transform: rotate(-45deg) translate(1px, -1px);
+  transition: 0.3s;
+}
+
+.btn:hover .arrow:before {
+  width: 20px;
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  left: 52px;
+  line-height: 38px;
+  font-weight: 600;
+  z-index: 3;
+  transition: 0.3s;
+}
+
+.btn:hover .text {
+  color: rgba(255, 255, 255, 0.9);
+}

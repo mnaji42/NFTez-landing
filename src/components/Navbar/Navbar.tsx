@@ -6,6 +6,8 @@ import { useLandingState } from "../../context/LandingStateContext"
 import { AnimateLogo } from "../icons"
 import { sections } from "../../constants"
 
+import DocButton from "./DocButton"
+
 import cn from "classnames"
 import { styles } from "../../styles"
 import s from "./Navbar.module.css"
@@ -101,15 +103,10 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
               {section}
             </motion.li>
           ))}
-          <motion.li
-            className={cn(s.navLink, s.documentation)}
-            variants={linkVariants}
-          >
-            <a href="https://nftez-doc.vercel.app" target="_blank">
-              Documentation
-            </a>
-          </motion.li>
         </motion.ul>
+        <a href="https://nftez-doc.vercel.app" target="_blank">
+          <DocButton />
+        </a>
       </div>
     </motion.nav>
   )
