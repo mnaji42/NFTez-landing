@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { useLandingState } from "../../context/LandingStateContext"
 import { AnimateLogo } from "../icons"
 import { sections } from "../../constants"
+import { MediaQueries } from "../"
 
 import DocButton from "./DocButton"
 
@@ -61,6 +62,21 @@ const linkVariants = {
   },
 }
 
+const docsVariants = {
+  hidden: {
+    opacity: 0,
+    y: 15,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 1.5,
+      duration: 0.5,
+    },
+  },
+}
+
 const Navbar: FC<NavbarProps> = ({ className }) => {
   const { hash, setHash } = useLandingState()
 
@@ -104,9 +120,15 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
             </motion.li>
           ))}
         </motion.ul>
-        <a href="https://nftez-doc.vercel.app" target="_blank">
+        <motion.a
+          href="https://nftez-doc.vercel.app"
+          target="_blank"
+          initial="hidden"
+          animate="visible"
+          variants={docsVariants}
+        >
           <DocButton />
-        </a>
+        </motion.a>
       </div>
     </motion.nav>
   )
