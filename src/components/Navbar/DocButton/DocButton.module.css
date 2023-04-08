@@ -1,6 +1,6 @@
 .btn {
   position: relative;
-  width: 210px;
+  width: 200px;
   height: 40px; /* Same as circle width */
   border: 1px solid white;
   border-color: rgba(255, 255, 255, 0.9);
@@ -37,13 +37,13 @@
   border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
   top: 13px;
-  left: 10px;
+  left: 11px;
   transform: rotate(45deg);
   transition: 0.3s;
 }
 
 .btn:hover .arrow {
-  left: 30px;
+  left: 25px;
 }
 
 .arrow:before {
@@ -61,13 +61,13 @@
 }
 
 .btn:hover .arrow:before {
-  width: 20px;
+  width: 15px;
 }
 
 .text {
   position: absolute;
   top: 0;
-  left: 52px;
+  left: 50px;
   line-height: 38px;
   font-weight: 600;
   z-index: 3;
