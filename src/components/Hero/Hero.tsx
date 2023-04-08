@@ -47,7 +47,7 @@ const Hero: FC<HeroProps> = ({ className }) => {
   }, [])
   return (
     <section className={cn(s.container, className)}>
-      <span className="hash-span absolute" ref={spanRef}>
+      <span className="hash-span absolute top-0 left-0" ref={spanRef}>
         &nbsp;
       </span>
       <div className={s.subContainer}>
