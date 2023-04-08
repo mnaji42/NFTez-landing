@@ -1,4 +1,7 @@
 import React, { FC } from "react"
+
+import { MediaQueries } from "../../"
+
 import cn from "classnames"
 import s from "./DocButton.module.css"
 
@@ -12,7 +15,14 @@ const DocButton: FC<DocButtonProps> = ({ className }) => {
       <span className={s.circle}>
         <span className={s.arrow}></span>
       </span>
-      <span className={s.text}>Documentation</span>
+      <span className={s.text}>
+        <MediaQueries hidden={["xs"]}>
+          <>Documentation</>
+        </MediaQueries>
+        <MediaQueries visible={["xs"]}>
+          <>Docs</>
+        </MediaQueries>
+      </span>
     </button>
   )
 }

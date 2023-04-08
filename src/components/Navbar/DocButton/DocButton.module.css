@@ -1,6 +1,6 @@
 .btn {
   position: relative;
-  width: 200px;
+  width: 112px;
   height: 40px; /* Same as circle width */
   border: 1px solid white;
   border-color: rgba(255, 255, 255, 0.9);
@@ -76,4 +76,10 @@
 
 .btn:hover .text {
   color: rgba(255, 255, 255, 0.9);
+}
+
+@screen sm {
+  .btn {
+    width: 200px;
+  }
 }
