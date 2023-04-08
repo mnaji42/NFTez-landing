@@ -1,6 +1,6 @@
 .btn {
   position: relative;
-  width: 112px;
+  width: 72px;
   height: 40px; /* Same as circle width */
   border: 1px solid white;
   border-color: rgba(255, 255, 255, 0.9);
@@ -67,7 +67,7 @@
 .text {
   position: absolute;
   top: 0;
-  left: 50px;
+  left: 16px;
   line-height: 38px;
   font-weight: 600;
   z-index: 3;
@@ -81,5 +81,8 @@
 @screen sm {
   .btn {
     width: 200px;
+  }
+  .text {
+    left: 50px;
   }
 }

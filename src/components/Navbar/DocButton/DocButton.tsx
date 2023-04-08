@@ -12,9 +12,11 @@ interface DocButtonProps {
 const DocButton: FC<DocButtonProps> = ({ className }) => {
   return (
     <button className={cn(s.btn, className)}>
-      <span className={s.circle}>
-        <span className={s.arrow}></span>
-      </span>
+      <MediaQueries hidden={["xs"]}>
+        <span className={s.circle}>
+          <span className={s.arrow}></span>
+        </span>
+      </MediaQueries>
       <span className={s.text}>
         <MediaQueries hidden={["xs"]}>
           <>Documentation</>
