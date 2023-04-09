@@ -1,9 +1,13 @@
 .container {
-  /* Your styles here */
-  @apply text-center;
-  transform: translateY(-42px);
+  @apply text-center px-4;
 }
 
 .cardContainer {
   @apply mt-10 flex flex-wrap gap-10 justify-center;
+}
+
+@screen md {
+  .container {
+    @apply mb-32;
+  }
 }

@@ -1,5 +1,5 @@
 .container {
-  @apply xs:w-[250px] w-full;
+  @apply xs:w-[250px] w-full max-w-[300px];
 }
 
 .subContainer {
