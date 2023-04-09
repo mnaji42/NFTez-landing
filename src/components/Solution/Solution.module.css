@@ -7,7 +7,11 @@
 }
 
 .rightContainer {
-  @apply w-[550px] flex flex-col justify-between z-10;
+  max-width: 700px;
+}
+
+.sdkContainer {
+  @apply w-[550px] m-auto p-4;
 }
 
 .leftContainer {
@@ -15,11 +19,11 @@
 }
 
 .buttonContainer {
-  @apply flex flex-wrap justify-center;
+  @apply flex flex-wrap justify-center mb-9;
 }
 
 .code {
-  @apply overflow-hidden;
+  @apply overflow-scroll;
 }
 
 .button {
@@ -82,7 +86,6 @@
 }
 
 .resContainer {
-  @apply overflow-hidden;
   width: calc(100vw - 900px);
   max-height: 416px !important;
   overflow: scroll;
@@ -91,5 +94,8 @@
 @screen xl {
 .leftContainer {
  @apply block; 
+}
+.rightContainer {
+  @apply w-[550px] flex flex-col justify-between z-10;
 }
 }

@@ -1,7 +1,13 @@
 .container {
-  @apply max-w-7xl mx-auto relative z-0 min-h-screen box-border;
+  @apply max-w-7xl mx-auto relative z-0 box-border;
 }
 
 .componentContainer {
   @apply flex justify-center;
+}
+
+@screen md {
+  .container {
+    @apply min-h-screen;
+  }
 }

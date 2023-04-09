@@ -6,6 +6,7 @@ import Typed from "react-typed"
 
 import sdk from "test-tezos"
 
+import useScreen from "../../hooks/useScreen"
 import { fadeIn, textVariant } from "../../utils/motion"
 import { SectionWrapper } from "../../hoc"
 import CodeEditor from "./CodeEditor"
@@ -32,6 +33,7 @@ const buttonsVariants = {
 }
 
 const Solution: FC<SolutionProps> = ({ className }) => {
+  const screen = useScreen()
   const [funcSelected, setFuncSelected] = useState<string>("")
   const [resApi, setResApi] = useState<{} | null>("")
   const [loading, setLoading] = useState<boolean>(false)
@@ -44,23 +46,25 @@ const Solution: FC<SolutionProps> = ({ className }) => {
 
   useEffect(() => {
     ;(async () => {
-      let res = null
-      setLoading(true)
-      if (funcSelected === "getNFTCollection") {
-        res = await sdk.getNFTCollection(contractAddress)
-      } else if (funcSelected === "getWalletNFTs") {
-        res = await sdk.getWalletNFTs(walletAddress)
-      } else if (funcSelected === "verifyOwnership") {
-        const isOwner = await sdk.verifyOwnership(
-          walletAddress,
-          contractAddress
-        )
-        res = {
-          isOwner,
+      if (screen === "xl") {
+        let res = null
+        setLoading(true)
+        if (funcSelected === "getNFTCollection") {
+          res = await sdk.getNFTCollection(contractAddress)
+        } else if (funcSelected === "getWalletNFTs") {
+          res = await sdk.getWalletNFTs(walletAddress)
+        } else if (funcSelected === "verifyOwnership") {
+          const isOwner = await sdk.verifyOwnership(
+            walletAddress,
+            contractAddress
+          )
+          res = {
+            isOwner,
+          }
         }
+        setResApi(res)
+        setLoading(false)
       }
-      setResApi(res)
-      setLoading(false)
     })()
   }, [funcSelected])
 

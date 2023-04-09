@@ -2,6 +2,7 @@ import React, { FC, useRef, useEffect } from "react"
 
 import { useLandingState } from "../../context/LandingStateContext"
 import { motion } from "framer-motion"
+import useScreen from "../../hooks/useScreen"
 import { staggerContainer } from "../../utils/motion"
 import { ScrollDown } from "../../components"
 
