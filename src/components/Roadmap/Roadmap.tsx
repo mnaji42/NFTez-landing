@@ -5,6 +5,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component"
 import { motion } from "framer-motion"
+import useScreen from "../../hooks/useScreen"
 
 import RoadmapCard from "./RoadmapCard"
 
@@ -22,6 +23,7 @@ interface RoadmapProps {
 }
 
 const Roadmap: FC<RoadmapProps> = ({ className }) => {
+  const screen = useScreen()
   return (
     <div className={cn(s.container, className)}>
       <motion.div variants={textVariant(0)}>
@@ -37,7 +39,7 @@ const Roadmap: FC<RoadmapProps> = ({ className }) => {
               contentStyle={{
                 background: "#1d1836",
                 color: "#fff",
-                width: "43%",
+                marginTop: screen === "xl" ? "0px" : "96px",
                 borderRadius: "8px",
                 border: "solid 1px #444444",
               }}
@@ -45,16 +47,7 @@ const Roadmap: FC<RoadmapProps> = ({ className }) => {
                 borderRight: "7px solid  #444444",
               }}
               dateClassName={s.date}
-              iconStyle={{ background: goal.iconBg }}
-              icon={
-                <div className="flex justify-center items-center w-full h-full">
-                  {/* <img
-                    src={goal.icon}
-                    alt={goal.company_name}
-                    className="w-[60%] h-[60%] object-contain"
-                  /> */}
-                </div>
-              }
+              iconStyle={{ background: "#383E56" }}
             >
               <RoadmapCard goal={goal} />
             </VerticalTimelineElement>

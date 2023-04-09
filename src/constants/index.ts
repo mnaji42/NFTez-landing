@@ -11,7 +11,6 @@ const roadmap = [
   {
     date: "March 23",
     title: "Business Case NFTez",
-    iconBg: "#383E56",
     points: [
       "Market analysis",
       "Definition of the solution",
@@ -22,7 +21,6 @@ const roadmap = [
   {
     date: "April 23",
     title: "Hackathon Tezos x Sia Partners",
-    iconBg: "#E6DEDD",
     points: [
       "Definition of our proof of concept",
       "Development of a v0 of our API via SDK",
@@ -33,7 +31,6 @@ const roadmap = [
   {
     date: "June 23",
     title: "Support for new NFT use cases",
-    iconBg: "#E6DEDD",
     points: [
       "More comprehensive management of new use cases",
       "New function to enable creation of analytic dashboards",
@@ -43,7 +40,6 @@ const roadmap = [
   {
     date: "September 23",
     title: "Support for use cases outside of NFTs",
-    iconBg: "#E6DEDD",
     points: [
       "Other assets including DeFi assets",
       "Creation of new services for our clients by leveraging our infrastructure",
