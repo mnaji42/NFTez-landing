@@ -6,8 +6,9 @@ import { fadeIn } from "../../../utils/motion"
 
 import cn from "classnames"
 import s from "./PricingCard.module.css"
+import { Enterprise } from "../../icons"
 
-  interface TeamCardProps {
+interface TeamCardProps {
   className?: string
   index: number
   title: string
@@ -34,22 +35,31 @@ const TeamCard: FC<TeamCardProps> = ({
         variants={fadeIn("right", "spring", index * 0.35, 0.75)}
         className={cn(s.subContainer, "shadow-card green-pink-gradient")}
       >
-        <div className={s.content}>  {/* Padding and change mehdi component */}
+        <div className={s.content}>
+          {" "}
+          {/* Padding and change mehdi component */}
           <p className={s.title}>{title}</p>
           <p className={s.pricingDescription}>{pricingDescription}</p>
-          {price !== undefined ? 
+          {price !== undefined ? (
             <div className={s.priceContainer}>
               <div className={s.dollar}>$</div>
               <p className={s.price}>{price}</p>
-            </div> :
-            <img src="https://assets-global.website-files.com/5f973c970bea5548ad4287ef/62e6fef9069cdf098893f756_enterprise.svg" loading="lazy" alt="" className={s.image}></img>
-          }
+            </div>
+          ) : (
+            <div className={s.image}>
+              <Enterprise />
+            </div>
+          )}
           <p className={s.textSize}>{textSize}</p>
-          <a href='#' className={s.button}>{textButton}</a>
+          <button className={cn(s.button, "violet-gradient")}>
+            {textButton}
+          </button>
           <div className={s.line}></div>
           <ul className={s.listPlanText}>
             {planText.map((elem, index) => (
-              <li key={`pricing-key-${index}`} className='s.li'>{elem}</li>
+              <li key={`pricing-key-${index}`} className="s.li">
+                {elem}
+              </li>
             ))}
           </ul>
         </div>

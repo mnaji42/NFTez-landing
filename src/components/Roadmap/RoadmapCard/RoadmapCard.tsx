@@ -9,7 +9,7 @@ interface RoadmapCardProps {
 
 const RoadmapCard: FC<RoadmapCardProps> = ({ className, goal }) => {
   return (
-    <div className={cn(s.container, className)}>
+    <div className={cn(s.container, className, "shadow-card")}>
       <div className={s.date}>{goal.date}</div>
       <div>
         <h3 className={s.title}>{goal.title}</h3>

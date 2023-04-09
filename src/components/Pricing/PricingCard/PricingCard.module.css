@@ -11,8 +11,6 @@
 
 .content {
   @apply bg-tertiary rounded-[20px] min-h-[280px] flex justify-evenly items-center flex-col;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5),
-    inset 0 0 0 1000px linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   padding: 20px;
 }
 
@@ -45,8 +43,14 @@
 
 .dollar {
   display: inline-block;
-  background-image: linear-gradient(337deg, #733ff1, #36beff);
-  font-family: Ppneuemontreal, sans-serif;
+  background: #804dee;
+  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #804dee 0%,
+    rgba(60, 51, 80, 0) 100%
+  );
+  background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
   line-height: 110%;
   font-weight: 700;
@@ -57,7 +61,15 @@
 }
 
 .price {
-  background-image: linear-gradient(245deg, #733ff1, #36beff);
+  /* background-image: linear-gradient(245deg, #733ff1, #36beff); */
+  background: #804dee;
+  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #804dee 0%,
+    rgba(60, 51, 80, 0) 100%
+  );
+  background-color: rgba(255, 255, 255, 0.8);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -78,11 +90,8 @@
   margin-bottom: 2rem;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
-  border: 1px solid #020202;
   border-radius: 0.625rem;
   background-color: transparent;
-  color: #0057da;
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   font-size: 1.1rem;
   font-weight: 700;
   text-align: center;
@@ -91,9 +100,8 @@
 
 /* Style au survol */
 .button:hover {
-  background-color: #0057da;
-  color: #ffffff;
-  transform: scale(1.02);
+  @apply text-primary;
+  background-color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
 
