@@ -21,7 +21,7 @@ module.exports = {
         sm: "577px",
         md: "768px",
         lg: "992px",
-        xl: "1201px",
+        xl: "1170px",
         "2xl": "1536px",
       },
       backgroundImage: {
