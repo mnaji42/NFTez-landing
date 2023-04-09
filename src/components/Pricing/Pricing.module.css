@@ -1,6 +1,5 @@
 .container {
-  /* Your styles here */
-  @apply text-center;
+  @apply text-center px-4 mb-32;
 }
 
 .cardContainer {

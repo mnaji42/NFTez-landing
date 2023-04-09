@@ -8,6 +8,6 @@
 
 @screen md {
   .container {
-    @apply mb-32;
+    @apply mb-10;
   }
 }

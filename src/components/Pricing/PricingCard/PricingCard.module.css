@@ -1,8 +1,8 @@
 .container {
-  @apply xs:w-[340px] w-full;
+  @apply xs:w-[340px] w-full max-w-[400px];
 }
 .container:hover {
-  transform: scale(1.01)
+  transform: scale(1.01);
 }
 
 .subContainer {
@@ -11,7 +11,8 @@
 
 .content {
   @apply bg-tertiary rounded-[20px] min-h-[280px] flex justify-evenly items-center flex-col;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 0 1000px linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1000px linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   padding: 20px;
 }
 
@@ -49,7 +50,7 @@
   font-size: 1.5rem;
   line-height: 110%;
   font-weight: 700;
-  letter-spacing: -.5px;
+  letter-spacing: -0.5px;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -85,16 +86,16 @@
   font-size: 1.1rem;
   font-weight: 700;
   text-align: center;
-  transition: transform .2s, color .2s, background-color .2s;
+  transition: transform 0.2s, color 0.2s, background-color 0.2s;
 }
 
-  /* Style au survol */
-  .button:hover {
-    background-color: #0057da;
-    color: #ffffff;
-    transform: scale(1.02);
-    cursor: pointer;
-  }
+/* Style au survol */
+.button:hover {
+  background-color: #0057da;
+  color: #ffffff;
+  transform: scale(1.02);
+  cursor: pointer;
+}
 
 .line {
   border: 1px solid rgba(255, 255, 255, 0.8);
