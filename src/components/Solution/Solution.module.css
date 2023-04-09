@@ -11,7 +11,7 @@
 }
 
 .leftContainer {
-  
+ @apply hidden; 
 }
 
 .buttonContainer {
@@ -34,8 +34,10 @@
   font-size: 1.1rem;
   line-height: 120%;
   font-weight: 500;
-  /* opacity: 0; */
-  /* transition: transform 0.4s; */
+}
+
+.form {
+  @apply mb-6;
 }
 
 .button:hover {
@@ -74,9 +76,20 @@
   @apply text-[#1DCA18];
 }
 
+.resEditor {
+  height: 416px;
+  overflow: hidden;
+}
+
 .resContainer {
   @apply overflow-hidden;
   width: calc(100vw - 900px);
-  max-height: 60vh;
+  max-height: 416px !important;
   overflow: scroll;
+}
+
+@screen xl {
+.leftContainer {
+ @apply block; 
+}
 }

@@ -9,7 +9,8 @@ import sdk from "test-tezos"
 import { fadeIn, textVariant } from "../../utils/motion"
 import { SectionWrapper } from "../../hoc"
 import CodeEditor from "./CodeEditor"
-import { Input } from "../"
+import FormSdk from "./FormSdk"
+
 import cn from "classnames"
 import s from "./Solution.module.css"
 import Spinner from "../Spinner"
@@ -144,7 +145,6 @@ const Solution: FC<SolutionProps> = ({ className }) => {
                     strings={["yarn add test-tezos", "npm install test-tezos"]}
                     typeSpeed={80}
                     backSpeed={15}
-                    loop
                   />
                 </CodeEditor>
               </motion.div>
@@ -174,10 +174,16 @@ const Solution: FC<SolutionProps> = ({ className }) => {
             </div>
           </div>
           <div className={s.leftContainer}>
-            <div>
-              <h3>Try it yourself</h3>
-              <Input type="text" required label="Hello" />
-            </div>
+            <FormSdk
+              funcSelected={funcSelected}
+              contractAddress={contractAddress}
+              setContractAddress={setContractAddress}
+              walletAddress={walletAddress}
+              setWalletAddress={setWalletAddress}
+              setResApi={setResApi}
+              setLoading={setLoading}
+              className={cn("shadow-card rounded-lg", s.form)}
+            />
             <motion.div
               variants={fadeIn("left", "spring", 1.25, 0.75)}
               className={cn(
@@ -185,7 +191,7 @@ const Solution: FC<SolutionProps> = ({ className }) => {
                 "shadow-card green-pink-gradient rounded-lg"
               )}
             >
-              <CodeEditor nbLigne={20} className="shadow-card ">
+              <CodeEditor nbLigne={16} className={s.resEditor}>
                 <motion.div
                   className={s.resContainer}
                   variants={jsonVariants}

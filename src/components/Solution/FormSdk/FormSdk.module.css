@@ -1,0 +1,17 @@
+.container {
+  @apply flex gap-4;
+}
+
+.skeletton {
+  height: 46px;
+}
+
+.button {
+  @apply px-4;
+  border-radius: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}

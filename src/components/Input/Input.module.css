@@ -1,5 +1,5 @@
 .container {
-  @apply relative w-64;
+  @apply relative w-full;
 }
 
 .container input {
@@ -17,19 +17,12 @@
 
 .container input:valid ~ span,
 .container input:focus ~ span {
-  @apply text-white text-[0.8em] px-2.5 py-0 rounded;
-  transform: translate(10px, -7px);
+  @apply text-primary text-[0.8em] px-2 py-0 rounded bg-secondary;
+  transform: translate(10px, -15px);
   letter-spacing: 0 0.2em;
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
-  background: -webkit-linear-gradient(
-    -90deg,
-    #804dee 0%,
-    rgba(60, 51, 80, 0) 100%
-  );
 }
 
 .container input:valid,
 .container input:focus {
-  border: 1px solid rgba(255, 255, 255 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
